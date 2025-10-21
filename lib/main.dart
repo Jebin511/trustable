@@ -9,10 +9,16 @@ import 'package:trustable/plan.dart';
 import 'package:trustable/regcheck.dart';
 import 'package:trustable/transaction_screen.dart';
 import 'package:trustable/welcome.dart';
+import 'package:trustable/choose.dart';
 
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: const BottomNavExample()));
+    initialRoute: '/choose',
+    routes: {
+      '/choose': (context) => ChoosePage(),
+      '/welcome': (context) => WelcomePage(),
+      '/home': (context) => BottomNavExample(),
+    },
+  ));
 }
-
